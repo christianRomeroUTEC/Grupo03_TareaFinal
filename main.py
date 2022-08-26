@@ -61,7 +61,25 @@ def agregarValores():
 
 
 def eliminarValores():
-    print('Has elegido la opción 2')
+  os.system("clear")
+  cantidad = len(num_list)
+  print('Eliminar valor de la lista')
+  print('Cantidad de registros en la lista: ' , cantidad)
+  if(cantidad > 0):
+    print(num_list)
+    numero = input("Ingrese valor a buscar: ")
+    try:
+      numero = int(numero)
+      av.eliminarValores(num_list, numero)
+      input
+    except:
+      print("No ingreso valroes")
+  else:
+    print('No hay valores ingresado en la lista')
+  input
+  
+
+  
 
 
 def buscarValores():

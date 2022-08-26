@@ -14,5 +14,15 @@ def agregar_valor(list, item):
   except:
     print("No ingreso valores")
   return list
+
+def eliminarValores(list, item):
+  try:
+    for i, valor in list:
+      if item[i] == valor:
+        list.remove(item)
+  except:
+    print("No se pudo borrar el elemento")
+
+  return list
   
   
