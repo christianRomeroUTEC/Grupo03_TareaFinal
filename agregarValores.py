@@ -17,12 +17,14 @@ def agregar_valor(list, item):
 
 def eliminarValores(list, item):
   try:
-    for i, valor in list:
-      if item[i] == valor:
-        list.remove(item)
+    i=0
+    for i in list:
+      if i == item:
+        list.remove(i)
+      else:
+        i = i+1
   except:
     print("No se pudo borrar el elemento")
-
   return list
   
   

@@ -69,14 +69,14 @@ def eliminarValores():
     print(num_list)
     numero = input("Ingrese valor a buscar: ")
     try:
-      numero = int(numero)
-      av.eliminarValores(num_list, numero)
-      input
+        numero = int(numero)
+        av.eliminarValores(num_list, numero)
+        input
     except:
       print("No ingreso valroes")
   else:
     print('No hay valores ingresado en la lista')
-  input
+  input()
   
 
   
