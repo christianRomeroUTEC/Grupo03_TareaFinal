@@ -74,7 +74,7 @@ def eliminarValores():
         print('Valores nuevos: ', num_list)
         input
     except:
-      print("No ingreso valroes")
+      print("No ingreso valores")
   else:
     print('No hay valores ingresado en la lista')
   input()
