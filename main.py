@@ -2,6 +2,7 @@ import os
 import agregarValores as av
 
 def mostrar_menu(opciones):
+    os.system("clear")
     print("Grupo 13 - Cowabunga\nChristian Romero - Nicolas Goires - El Victor")
     print('Seleccione una opción:')
     for clave in sorted(opciones):
@@ -21,7 +22,6 @@ def ejecutar_opcion(opcion, opciones):
 def generar_menu(opciones, opcion_salida):
     opcion = None
     while opcion != opcion_salida:
-        os.system("clear")
         mostrar_menu(opciones)
         opcion = leer_opcion(opciones)
         ejecutar_opcion(opcion, opciones)
