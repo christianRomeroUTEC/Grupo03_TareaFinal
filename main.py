@@ -66,11 +66,12 @@ def eliminarValores():
   print('Eliminar valor de la lista')
   print('Cantidad de registros en la lista: ' , cantidad)
   if(cantidad > 0):
-    print(num_list)
+    print('Valores Actuales: ', num_list)
     numero = input("Ingrese valor a buscar: ")
     try:
         numero = int(numero)
         av.eliminarValores(num_list, numero)
+        print('Valores nuevos: ', num_list)
         input
     except:
       print("No ingreso valroes")
