@@ -28,11 +28,12 @@ def generar_menu(opciones, opcion_salida):
         print()
 
 
+
 def menu_principal():
     os.system("clear")
     opciones = {
-        '1': ('Agregar Valores a la lista', agregarValores),
-        '2': ('Borrar Valores de la lista', eliminarValores),
+        '1': ('Agregar valores a la lista', agregarValores),
+        '2': ('Borrar valores de la lista', eliminarValores),
         '3': ('Buscar valores en la lista', buscarValores),
         '4': ('Salir', salir)
     }
@@ -48,25 +49,24 @@ def agregarValores():
       numero = int(input("Ingrese un numero: "))
       if(numero != 0):
         av.agregar_valor(num_list, numero)
-      condicion = input("Para continuar agrgando a la lista presione Enter en caso contrario presione (N) ") 
+      condicion = input("\nPara continuar agregando a la lista presione Enter en caso contrario presione (N) ") 
       
       if("N" == condicion.upper()):
         break
     except:
       print("No se ingreso ningún valor")
   
-  print(num_list)
-  input("Presione Enter para volver al menu principal")
-
+  print('\nLa lista de valores ingresados es: ', num_list)
+  input("\nPresione Enter para volver al menu principal")
 
 
 def eliminarValores():
   os.system("clear")
   cantidad = len(num_list)
   print('Eliminar valor de la lista')
-  print('Cantidad de registros en la lista: ' , cantidad)
+  print('\nCantidad de registros en la lista: ' , cantidad)
   if(cantidad > 0):
-    print('Valores Actuales: ', num_list)
+    print('Valores actuales: ', num_list)
     numero = input("Ingrese valor a buscar: ")
     try:
         numero = int(numero)
@@ -77,11 +77,8 @@ def eliminarValores():
       print("No ingreso valores")
   else:
     print('No hay valores ingresados en la lista')
-  input("Presione enter para volver al menu principal")
+  input("\nPresione enter para volver al menu principal")
   
-
-  
-
 
 def buscarValores():
   os.system("clear")
@@ -97,9 +94,7 @@ def buscarValores():
       print("No ingreso un número")
   else:
     print("No hay valores ingresados en la lista")
-  input("Presione Enter para volver al menú principal")
-
-    
+  input("\nPresione Enter para volver al menú principal")
 
 
 def salir():

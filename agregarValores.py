@@ -2,7 +2,7 @@ def agregar_valor(list, item):
   try:
     list.append(int(item))
   except:
-    print("No ingreso valores")
+    print("\nNo ingreso valores")
   return list
 
 
@@ -15,7 +15,7 @@ def eliminarValores(list, item):
       else:
         i = i+1
   except:
-    print("No se pudo borrar el elemento")
+    print("\nNo se pudo borrar el elemento")
   return list
 
 
