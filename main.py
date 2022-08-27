@@ -49,15 +49,15 @@ def agregarValores():
     #av.pido_numero("Ingrese un numero: ")
       if(numero != 0):
         av.agregar_valor(num_list, numero)
-      condicion = input("Para continuar agrgando a la lista precione enter en caso contrario precione (N)") 
+      condicion = input("Para continuar agrgando a la lista presione Enter en caso contrario presione (N) ") 
       
       if("N" == condicion.upper()):
         break
     except:
-      print("No se ingreso ningun valor")
+      print("No se ingreso ningún valor")
   
   print(num_list)
-  input("Preciona enter para volver al menu principal")
+  input("Presione Enter para volver al menu principal")
 
 
 
@@ -78,7 +78,7 @@ def eliminarValores():
       print("No ingreso valores")
   else:
     print('No hay valores ingresados en la lista')
-  input("Preciona enter para volver al menu principal")
+  input("Presione enter para volver al menu principal")
   
 
   
@@ -98,7 +98,7 @@ def buscarValores():
       print("No ingreso un número")
   else:
     print("No hay valores ingresados en la lista")
-  input("Preciona enter para volver al menu principal")
+  input("Presione Enter para volver al menú principal")
 
     
 
@@ -108,5 +108,5 @@ def salir():
 
 if __name__ == '__main__':
   
-  num_list = [1 , 2 , 3, 3, 44]
+  num_list = []
   menu_principal()
