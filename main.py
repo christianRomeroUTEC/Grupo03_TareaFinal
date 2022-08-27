@@ -49,14 +49,15 @@ def agregarValores():
     #av.pido_numero("Ingrese un numero: ")
       if(numero != 0):
         av.agregar_valor(num_list, numero)
-      condicion = input("Continuar: (N)o ") 
+      condicion = input("Para continuar agrgando a la lista precione enter en caso contrario precione (N)") 
+      
       if("N" == condicion.upper()):
         break
     except:
       print("No se ingreso ningun valor")
   
   print(num_list)
-  input()
+  input("preciona enter para volver al menu principal")
 
 
 
