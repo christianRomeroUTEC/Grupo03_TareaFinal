@@ -46,7 +46,6 @@ def agregarValores():
   while True:
     try:
       numero = int(input("Ingrese un numero: "))
-    #av.pido_numero("Ingrese un numero: ")
       if(numero != 0):
         av.agregar_valor(num_list, numero)
       condicion = input("Para continuar agrgando a la lista presione Enter en caso contrario presione (N) ") 
