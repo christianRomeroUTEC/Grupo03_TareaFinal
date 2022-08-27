@@ -18,7 +18,7 @@ def agregar_valor(list, item):
 def eliminarValores(list, item):
   try:
     i=0
-    for i in list:
+    while i < len(list):
       if i == item:
         list.remove(i)
       else:

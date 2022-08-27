@@ -108,5 +108,5 @@ def salir():
 
 if __name__ == '__main__':
   
-  num_list = []
+  num_list = [1 , 2 , 3, 3, 44]
   menu_principal()
