@@ -101,6 +101,6 @@ def salir():
     print('Saliendo')
 
 if __name__ == '__main__':
-  
+  os.system ("cls")
   num_list = []
   menu_principal()
