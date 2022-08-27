@@ -3,7 +3,7 @@ import agregarValores as av
 
 def mostrar_menu(opciones):
     os.system("clear")
-    print("Grupo 13 - Cowabunga\nChristian Romero - Nicolas Goires - El Victor")
+    print("Grupo 03 - Cowabunga\nChristian Romero - Nicolas Goires - Victor Craigdallie")
     print('Seleccione una opción:')
     for clave in sorted(opciones):
         print(f' {clave}) {opciones[clave][0]}')
@@ -57,7 +57,7 @@ def agregarValores():
       print("No se ingreso ningun valor")
   
   print(num_list)
-  input("preciona enter para volver al menu principal")
+  input("Preciona enter para volver al menu principal")
 
 
 
@@ -73,19 +73,34 @@ def eliminarValores():
         numero = int(numero)
         av.eliminarValores(num_list, numero)
         print('Valores nuevos: ', num_list)
-        input
+      
     except:
       print("No ingreso valores")
   else:
-    print('No hay valores ingresado en la lista')
-  input()
+    print('No hay valores ingresados en la lista')
+  input("Preciona enter para volver al menu principal")
   
 
   
 
 
 def buscarValores():
-    print('Has elegido la opción 3')
+  os.system("clear")
+  print("Buscar cantidad de veces que aparece el valor\n")
+  if(len(num_list) > 0):
+    numero = input("Ingrese valor a buscar: ")
+    try:
+      numero = int(numero)
+      result = av.buscar_valor(num_list, numero)
+      print("El valor buscado ", numero, " aparece ", result, " veces en la lista")
+    
+    except:
+      print("No ingreso un número")
+  else:
+    print("No hay valores ingresados en la lista")
+  input("Preciona enter para volver al menu principal")
+
+    
 
 
 def salir():

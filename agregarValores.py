@@ -26,5 +26,12 @@ def eliminarValores(list, item):
   except:
     print("No se pudo borrar el elemento")
   return list
-  
+
+def buscar_valor(list, item):
+  cant=0
+  for index in list:
+    if index == item:
+      cant = cant + 1
+  return cant
+    
   
