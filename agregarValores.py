@@ -2,28 +2,35 @@ def agregar_valor(list, item):
   try:
     list.append(int(item))
   except:
-    print("\nNo ingreso valores")
+    print("No ingreso valores")
   return list
 
 
 def eliminarValores(list, item):
   try:
     i=0
-    while i < len(list):
-      if i == item:
-        list.remove(i)
+    while i <= len(list)-1:
+      if list[i] == item:
+        list.pop(i)
       else:
         i = i+1
-  except:
-    print("\nNo se pudo borrar el elemento")
+  except Exception as e:
+    print("\nOcurrio un error: ", e)
   return list
 
 
 def buscar_valor(list, item):
   cant=0
-  for index in list:
-    if index == item:
-      cant = cant + 1
+  try:
+    i=0
+    while i <= len(list)-1:
+      if list[i] == item:
+        cant = cant + 1
+        i = i + 1
+      else:
+        i = i + 1
+  except Exception as e:
+    print("\nOcurrio un error: ", e)
   return cant
     
   

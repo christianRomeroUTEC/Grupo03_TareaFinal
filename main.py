@@ -1,5 +1,6 @@
 import os
-import agregarValores as av
+#import agregarValores as av
+import funciones as F
 
 def mostrar_menu(opciones):
     os.system("clear")
@@ -28,79 +29,30 @@ def generar_menu(opciones, opcion_salida):
         print()
 
 
-
 def menu_principal():
     os.system("clear")
     opciones = {
-        '1': ('Agregar valores a la lista', agregarValores),
-        '2': ('Borrar valores de la lista', eliminarValores),
+        '1': ('Agregar Valores a la lista', agregarValores),
+        '2': ('Borrar Valores de la lista', eliminarValores),
         '3': ('Buscar valores en la lista', buscarValores),
         '4': ('Salir', salir)
     }
 
     generar_menu(opciones, '4')
 
-
 def agregarValores():
-  os.system("clear")
-  print('Agregar Valores a la lista')
-  while True:
-    try:
-      numero = int(input("Ingrese un numero: "))
-      if(numero != 0):
-        av.agregar_valor(num_list, numero)
-      condicion = input("\nPara continuar agregando a la lista presione Enter en caso contrario presione (N) ") 
-      
-      if("N" == condicion.upper()):
-        break
-    except:
-      print("No se ingreso ningún valor")
-  
-  print('\nLa lista de valores ingresados es: ', num_list)
-  input("\nPresione Enter para volver al menu principal")
-
+    F.agregarValores(num_list)
 
 def eliminarValores():
-  os.system("clear")
-  cantidad = len(num_list)
-  print('Eliminar valor de la lista')
-  print('\nCantidad de registros en la lista: ' , cantidad)
-  if(cantidad > 0):
-    print('Valores actuales: ', num_list)
-    numero = input("Ingrese valor a buscar: ")
-    try:
-        numero = int(numero)
-        av.eliminarValores(num_list, numero)
-        print('Valores nuevos: ', num_list)
-      
-    except:
-      print("No ingreso valores")
-  else:
-    print('No hay valores ingresados en la lista')
-  input("\nPresione enter para volver al menu principal")
-  
+    F.eliminarValores(num_list)
 
 def buscarValores():
-  os.system("clear")
-  print("Buscar cantidad de veces que aparece el valor\n")
-  if(len(num_list) > 0):
-    numero = input("Ingrese valor a buscar: ")
-    try:
-      numero = int(numero)
-      result = av.buscar_valor(num_list, numero)
-      print("El valor buscado ", numero, " aparece ", result, " veces en la lista")
-    
-    except:
-      print("No ingreso un número")
-  else:
-    print("No hay valores ingresados en la lista")
-  input("\nPresione Enter para volver al menú principal")
-
+    F.buscarValores(num_list)
 
 def salir():
     print('Saliendo')
 
 if __name__ == '__main__':
-  os.system ("cls")
+  
   num_list = []
   menu_principal()
